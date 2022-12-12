@@ -1,0 +1,54 @@
+<html>
+    <title> Richard Lee - COMS3430 lab 2</title>
+    <body>
+        <script src = "main.js"></script>
+        <div class = "buttons">
+            <p>Choose the oscilloscope you want to sonify! </p>
+
+            <!-- Waveform methods -->
+            <label>
+                <input type = "Radio"  name = 'waveform' id = 'sine' checked = 'checked'>
+                <img src = "sine.GIF">
+            </label>
+            
+            <br>
+
+            <label>
+                <input type = "Radio"  name = "waveform" id = 'sawtooth'>
+                <img src = "saw.GIF">
+            </label>
+            
+            <!-- Synthesis methods -->
+            <p>Choose which synthesis technique you want to use:</p>
+            <label>
+                <input type = "Radio" name = "synthesis" id = "none" checked = 'checked'/>None
+                <input type = "Radio" name = "synthesis" id = "additive"/>Additive
+                <input type = "Radio" name = "synthesis" id = "AM"/>AM
+                <input type = "Radio" name = "synthesis" id = "FM"/>FM
+                <input type = "range" value = '100' min = '0' max = '300' step = '10' id = "fmBar" oninput = 'changeFMfreq(this.valueAsNumber)'/>
+            </label>
+
+            <br>
+            <p>Switch up you AM synth:</p>
+            <input type = "range" value = '0.5' min = '0' max = '1' step = '0.1' id = "depthBar" oninput = 'changeDepth(this.valueAsNumber)'/>Depth
+
+
+            <p>Would you like to add an LFO?</p>
+            <label>
+                <input type = 'checkbox' name = 'lfo' id = 'LFO'>(〜￣ △￣)〜
+                <input type = "range" value = '0.5' min = '0' max = '300' step = '5' id = "lfoBar" oninput = 'changeLFO(this.valueAsNumber)'/>
+            </label>
+            
+            <br>
+
+            <p>FM MODE ONLY - would you like to put two osc in parallel?</p>
+            <label>
+                <input type = 'checkbox' name = 'parallel' id = 'ParMMFM'>🎛⋕🎛 (for noise; infinite loop, un-check + play to stop)
+            </label>
+        </div>
+
+
+    </body>
+
+    
+</html>
